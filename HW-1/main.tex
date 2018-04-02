@@ -1,0 +1,142 @@
+\documentclass[paper=a4, fontsize=11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{tikz-qtree}
+\usepackage{lscape}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{xepersian}
+\settextfont[Path=fonts/]{Vazir.ttf}
+%\setlatintextfont{Times New Roman}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+\normalfont\normalsize
+\includegraphics[scale=0.1]{aut}
+\hspace{5cm}
+\includegraphics[scale=0.1]{ceit} \\
+\textsc دانشگاه صنعتی امیرکبیر \\
+\textsc دانشکده مهندسی کامپیوتر و فناوری اطلاعات
+\horrule{0.5pt} \\ [0.4cm] % Thin top horizontal rule
+\huge ارزیابی کارآیی سیستم‌های و شبکه‌های کامپیوتری \\ % The assignment title
+\huge تمرین اول \\ % The assignment title
+\horrule{2pt} \\ [0.5cm] % Thick bottom horizontal rule
+}
+
+\author{پرهام الوانی}
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section{سوال اول}
+
+\begin{align}
+\begin{split}
+    Prob\{X = n\} = \sum_{k=n}^{\infty} \frac{\eta^k e^{-\eta}}{k!} \binom{k}{n}p^n(1-p)^{k-n}
+\end{split}
+\end{align}
+
+\section{سوال دوم}
+
+\begin{align}
+\begin{split}
+    F(x) = \left \{
+        \begin{tabular}{lr}
+        \(x < 0\) & \(0\) \\
+        \(0 < x < 30\) & \(\frac{60 + x}{90}\) \\
+        \(x > 30\) & \(1\)
+        \end{tabular}
+      \right.
+\end{split}
+\end{align}
+
+\section{سوال سوم}
+
+\begin{align}
+\begin{split}
+    \int_{0}^{\infty} P(X > x)dx
+    = \int_{0}^{\infty} (1 - F(x))dx
+\end{split}
+\end{align}
+
+\section{سوال چهارم}
+
+\begin{align}
+\begin{split}
+    f_X(x) &= \int_{-\infty}^{\infty} \frac{1}{3}(x + y)dy \\
+    &= \int_{0}^{2} \frac{1}{3}(x + y)dy = \frac{1}{3}(2x + 2)
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    f_Y(y) &= \int_{-\infty}^{\infty} \frac{1}{3}(x + y)dx \\
+    &= \int_{0}^{1} \frac{1}{3}(x + y)dx = \frac{1}{3}(y + \frac{1}{2})
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    E[X] &= \int_{-\infty}^{\infty} \frac{1}{3}(2x + 2)dx \\
+    &= \int_{0}^{1} \frac{1}{3}(2x + 2)dx = 1
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    E[Y] &= \int_{-\infty}^{\infty} \frac{1}{3}(y + \frac{1}{2})dy \\
+    &= \int_{0}^{2} \frac{1}{3}(y + \frac{1}{2})dy = 1
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    E[XY] &= \int_{0}_{1}\int_{0}^{2} \frac{1}{3}xy(x + y)dydx\\
+    &= \int_{0}^{1} \frac{2x^2}{3} + \frac{8x}{9} dy\\
+    &= \frac{6}{9}
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    Cov[X,Y] = E[XY] - E[X]E[Y] = \frac{6}{9} - 1 * 1 = -\frac{1}{3}
+\end{split}
+\end{align}
+
+
+\end{document}
