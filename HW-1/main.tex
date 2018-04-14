@@ -160,5 +160,30 @@
 \end{split}
 \end{align}
 
+\section{سوال پنجم}
+ابتدا پارامتر‌های توزیع را بدست می‌آوریم.
+
+\begin{align}
+\begin{split}
+    \alpha = \frac{E[x]^2}{Var[x]} = \frac{12 * 12}{48} = 3\\
+    \beta = \frac{Var[X]}{E[x]} = \frac{48}{12} = 4\\
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    Prob\{X > 12\} = 1 - Prob\{X \le 12\} =&\\
+    1 - \sum_{i=0}^{2} \frac{(12/4)^i}{i!} e^{-12/4} = 1 - Poisson(\lambda = 3, X \le 2)
+    &= 1 - 0.4232
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    Prob\{X \le 6\} = \sum_{i=0}^{2} \frac{(6/4)^i}{i!} e^{-6/4} = Poisson(\lambda = 1.5, X \le 2) &=\\
+    1/2 (Poisson(\lambda = 1.4, X \le 2) + Poisson(\lambda = 1.6, X \le 2)) &= 1/2(0.8335 + 0.7834)
+\end{split}
+\end{align}
+
 
 \end{document}
