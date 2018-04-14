@@ -94,6 +94,28 @@
 \end{split}
 \end{align}
 
+از روش جز به جز در انتگرال‌گیری استفاده می‌کنیم:
+
+\begin{align}
+\begin{split}
+    \int_{0}^{\infty} (1 - F(x))dx
+    = x(1 - F(x)) - \int_{0}^{\infty} -xf(x)dx
+\end{split}
+\end{align}
+
+سمت راست این رابطه از دو قسمت تشکیل شده است،
+قسمت انتگرالی برابر با امید ریاضی \lr{X}
+می‌باشد و قسمت بدون انتگرال می‌بایست در دو نقطه صفر و بی‌نهایت
+محاسبه گردد که خواهیم داشت:
+
+\begin{align}
+\begin{split}
+    \int_{0}^{\infty} (1 - F(x))dx
+    &= x(1 - F(x)) + E[x]\\
+    &= 0 + E[x] = E[x]
+\end{split}
+\end{align}
+
 \section{سوال چهارم}
 
 \begin{align}
@@ -126,7 +148,7 @@
 
 \begin{align}
 \begin{split}
-    E[XY] &= \int_{0}_{1}\int_{0}^{2} \frac{1}{3}xy(x + y)dydx\\
+    E[XY] &= \int_{0}^{1}\int_{0}^{2} \frac{1}{3}xy(x + y)dydx\\
     &= \int_{0}^{1} \frac{2x^2}{3} + \frac{8x}{9} dy\\
     &= \frac{6}{9}
 \end{split}
