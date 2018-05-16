@@ -97,4 +97,78 @@
 با همین روند \lr{state} سوم نیز
 \lr{positive recurrent} است.
 
+با توجه به این موضوع که:
+
+\begin{align}
+\begin{split}
+    f_{21}^{(n)} = f_{31}^{(n)} = 0 \quad n \ge 1
+\end{split}
+\end{align}
+
+از وضعیت‌های ۲ و ۳ نمی‌توان به وضعیت ۱ رسید.
+
+\section{سوال دوم}
+
+از آنجایی که:
+
+\begin{align}
+\begin{split}
+    \frac{1}{p + q}
+    \begin{bmatrix}
+        q & p \\
+        q & p
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 - p & p \\
+        q & 1 - q
+    \end{bmatrix}
+    =
+    \frac{1}{p + q}
+    \begin{bmatrix}
+        q & p \\
+        q & p
+    \end{bmatrix}
+\end{split}
+\end{align}
+
+\begin{align}
+\begin{split}
+    \lim_{n\to\infty} P^n = &\\
+    \lim_{n\to\infty}
+    & \begin{bmatrix}
+        1 - p & p \\
+        q & 1 - q
+    \end{bmatrix}^n
+    = \frac{1}{p + q}
+    \begin{bmatrix}
+        q & p \\
+        q & p
+    \end{bmatrix}
+\end{split}
+\end{align}
+
+و در نهایت توزیع حدی برابر است با:
+
+\begin{align}
+\begin{split}
+    \begin{bmatrix}
+        q/(p + q) & p/(p + q) \\
+        q/(p + q) & p/(p + q)
+    \end{bmatrix}
+    \begin{bmatrix}
+        \alpha & 1 - \alpha
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        q/(p + q) & p/(p + q)
+    \end{bmatrix}
+\end{split}
+\end{align}
+
+از آنجایی که توزیع حدی از وضعیت اولیه مستقل است، این مقادیر حالت پایه نیز می‌باشند.
+
+\section{سوال سوم}
+\section{سوال چهارم}
+
+
 \end{document}
