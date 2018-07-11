@@ -21,6 +21,8 @@ import (
 )
 
 func main() {
+	fmt.Println("M/M/1 Queue")
+
 	var mu = flag.Float64("mu", 1.0, "service rate")
 	var lambda = flag.Float64("lambda", 1.0, "arrival rate")
 
