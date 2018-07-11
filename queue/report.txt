@@ -1,0 +1,11 @@
+VMs
+eNBs    mu      lambda  waiting time
+5       5       2.25    0.36
+10      2.2     1       0.83
+15      1.6     0.66    1.06
+
+Dockers
+eNBs    mu      lambda  waiting time
+5       16      10      0.16
+10      10      5       0.2
+15      8       4       0.25
